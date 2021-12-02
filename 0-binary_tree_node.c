@@ -6,6 +6,8 @@
  * @parent: pointer to parent node
  * @value: value in new node
  * Return: The returning node
+ *
+ * Description - points to the new node
  */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 {
@@ -22,3 +24,4 @@ new_node->left = NULL;
 
 return (new_node);
 }
+-
