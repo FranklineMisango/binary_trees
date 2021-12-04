@@ -14,10 +14,10 @@ size_t x;
 x = 0;
 
 if(tree == NULL)
-    return (0);
+return (0);
 
 if(tree->left == NULL || tree->right == NULL)
-    return (0);
+return (0);
 
 x = binary_tree_nodes(tree->left) + 1;
 x += binary_tree_nodes(tree->left);
