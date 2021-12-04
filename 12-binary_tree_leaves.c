@@ -18,7 +18,7 @@ right = 0;
 if (tree == NULL)
 return (0);
 
-if (tree->left == NULL && tree-> right == NULL)
+if (tree->left == NULL && tree->right == NULL)
 return (1);
 
 left = binary_tree_leaves(tree->left);
