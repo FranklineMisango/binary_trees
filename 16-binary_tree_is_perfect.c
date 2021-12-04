@@ -8,26 +8,26 @@
  */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-	int left, right, size, pow;
+int left, right, size, pow;
 
-	if (tree == NULL)
-		return (0);
+if (tree == NULL)
+return (0);
 
-	left = custom_height(tree->left);
-	right = custom_height(tree->right);
-	size = binary_tree_size(tree);
+left = custom_height(tree->left);
+right = custom_height(tree->right);
+size = binary_tree_size(tree);
 
-	if (size == 1)
-		return (1);
-	if (left >= 0 && right >= 0 && left == right)
-	{
-		pow = get_power(left + 1);
+if (size == 1)
+return (1);
+if (left >= 0 && right >= 0 && left == right)
+{
+pow = get_power(left + 1);
 
-		if (pow - 1 == size)
-			return (1);
-	}
+if (pow - 1 == size)
+return (1);
+}
 
-	return (0);
+return (0);
 }
 
 /**
@@ -37,21 +37,21 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
  */
 int custom_height(const binary_tree_t *tree)
 {
-	int left, right;
+int left, right;
 
-	if (tree == NULL)
-		return (-1);
+if (tree == NULL)
+return (-1);
 
-	if (tree->left == NULL && tree->right == NULL)
-		return (0);
+if (tree->left == NULL && tree->right == NULL)
+return (0);
 
-	left = custom_height(tree->left) + 1;
-	right = custom_height(tree->right) + 1;
+left = custom_height(tree->left) + 1;
+right = custom_height(tree->right) + 1;
 
-	if (left > right)
-		return (left);
-	else
-		return (right);
+if (left > right)
+return (left);
+else
+return (right);
 }
 
 /**
@@ -61,15 +61,15 @@ int custom_height(const binary_tree_t *tree)
  */
 size_t binary_tree_size(const binary_tree_t *tree)
 {
-	size_t count;
+size_t count;
 
-	if (tree == NULL)
-		return (0);
+if (tree == NULL)
+return (0);
 
-	count = binary_tree_size(tree->left) + 1;
-	count += binary_tree_size(tree->right);
+count = binary_tree_size(tree->left) + 1;
+count += binary_tree_size(tree->right);
 
-	return (count);
+return (count);
 }
 
 /**
@@ -79,10 +79,10 @@ size_t binary_tree_size(const binary_tree_t *tree)
  */
 int get_power(int exp)
 {
-	int pow, i;
+int pow, i;
 
-	for (i = 0, pow = 1; i <= exp; i++)
-		pow *= 2;
+for (i = 0, pow = 1; i <= exp; i++)
+pow *= 2;
 
-	return (pow);
+return (pow);
 }
