@@ -6,7 +6,7 @@
  *
  * @tree: root node of the tree to traverse
  * @func: function to call for each node
- * @n: Integer stored in the node
+ *
  */
 
 void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int))
